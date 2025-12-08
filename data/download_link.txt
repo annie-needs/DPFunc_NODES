@@ -1,4 +1,8 @@
-All BP data and PDB related data (residue features and graph strucutre of BP,MF,CC) are too large (about 300GB). You can use the following command to download them:
+############update############
+The dataset used in DPFunc paper can be downloaded from: https://drive.google.com/file/d/1qrxbkk450GJzhVfqnAN9Ms798owrq96n/view?usp=sharing​
+
+############full data with feature files############
+All data and PDB related data (residue features and graph strucutre of BP,MF,CC) are too large (about 300GB). You can use the following command to download them:
 wget http://bioinformatics.csu.edu.cn/DeepDoguest/data/0 -O data_part.tar.gz00 ;
 wget http://bioinformatics.csu.edu.cn/DeepDoguest/data/1 -O data_part.tar.gz01 ;
 wget http://bioinformatics.csu.edu.cn/DeepDoguest/data/2 -O data_part.tar.gz02 ;

@@ -8,6 +8,8 @@ If you encounter any bugs or issues, feel free to contact us.
 
 ## 🚀 Latest Updates
 
+**[December 2025] Data File Update**: As the old download links currently is unavailable, we have updated the dataset used in DPFunc paper here: https://drive.google.com/file/d/1qrxbkk450GJzhVfqnAN9Ms798owrq96n/view?usp=sharing​. It consists of protein id, sequences and corresponding GO terms. You can follow our tutorial to process AF-PDB, InterPro and ESM representations, so that you can retrain our model.
+
 **[June 2025] Data Processing Tutorial Update**: We have streamlined our data processing pipeline with a comprehensive step-by-step tutorial. Users can now easily generate all required data using our new Jupyter notebook instead of following the previous complex workflow.
 
 ---
