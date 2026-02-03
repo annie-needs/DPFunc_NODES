@@ -29,6 +29,7 @@ device = torch.device("cuda")
 
 batch_size = 10
 steps = len(x_seqs)//batch_size#+1
+print(steps)
 for batch_idx in trange(steps):
     seq_reps = {}
 
@@ -48,6 +49,7 @@ for batch_idx in trange(steps):
     for i, tokens_len in enumerate(batch_lens):
         seq_reps[prs[i]] = token_representations[i, 1 : tokens_len - 1].numpy()
     
+    os.makedirs('./processed_file/esm_emds/', exist_ok=True)
     save_pkl('./processed_file/esm_emds/esm_part_{}.pkl'.format(batch_idx), seq_reps)
 
     for pr in prs:
