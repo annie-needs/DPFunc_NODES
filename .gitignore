@@ -1,4 +1,4 @@
-./DataProcess/AF2DB/
+DataProcess/AF2DB/
 ./DataProcess/AF2DB/bad_pdbs/
 ./DataProcess/MSM*
 save_models/
