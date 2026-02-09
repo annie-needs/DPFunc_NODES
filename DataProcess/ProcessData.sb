@@ -9,19 +9,19 @@
 #SBATCH --time=06:00:00               # limit of wall clock time - how long the job will run (same as -t)
 #SBATCH --nodes=1                     # number of different nodes - could be an exact number or a range of nodes (same as -N)
 #SBATCH --ntasks=1                    # number of tasks - how many tasks (nodes) that you require (same as -n)
-#SBATCH --gpus=v100:3                 # number of GPUs 
-#SBATCH --mem-per-gpu=2G             # memory required per allocated CPU (or core) - amount of memory (in bytes)
-#SBATCH --output=MSM_%j.out     # output file (%j will be replaced with job ID)
-#SBATCH --error=MSM_%j.err      # error file (%j will be replaced with job ID)
+#SBATCH --gpus=v100:2                 # number of GPUs 
+#SBATCH --mem-per-gpu=15G             # memory required per allocated CPU (or core) - amount of memory (in bytes)
+#SBATCH --output=DProcess_%j.out     # output file (%j will be replaced with job ID)
+#SBATCH --error=DProcess_%j.err      # error file (%j will be replaced with job ID)
 #SBATCH --job-name=Stp1thru3         # you can give your job a name for easier identification (same as -J)
 
 ########## Command Lines for Job Running ##########
 
 module purge
 module load Miniforge3
-conda activate py38dgl
+conda activate basic_env
 
-cd /mnt/research/woldring_lab/Members/Needs/NODES/DPFunc_NODES/DataProcess
+cd /mnt/research/woldring_lab/Members/Needs/NODES/DPFunc_NODES/DataProcess/
 
 python Process_data_script.py
 

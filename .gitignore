@@ -1,4 +1,6 @@
 DataProcess/AF2DB/
+DataProcess/LargeScaleData/
+DataProcess/processed_file/
 ./DataProcess/AF2DB/bad_pdbs/
 ./DataProcess/MSM*
 save_models/

@@ -179,6 +179,16 @@ for protein in tqdm(pid_list):
         
         pdb_points_info[protein] = valid_coords
         pdb_seq_info[protein] = valid_sequence
+
+#
+#
+try:
+    with open('./process_data_backup.json', 'w', encoding = 'utf-8') as jfile:
+        json.dum(pdb_seq_info, jfile, ensure_ascii=False)
+    print("backup JSON saved")
+except Exception as e:
+    print(f'Failed to save backup seq json: {e}')
+
 #
 #
 save_pkl('./processed_file/pdb_points.pkl', pdb_points_info)
