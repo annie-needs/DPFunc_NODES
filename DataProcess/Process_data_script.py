@@ -184,7 +184,7 @@ for protein in tqdm(pid_list):
 #
 try:
     with open('./process_data_backup.json', 'w', encoding = 'utf-8') as jfile:
-        json.dum(pdb_seq_info, jfile, ensure_ascii=False)
+        json.dump(pdb_seq_info, jfile, ensure_ascii=False)
     print("backup JSON saved")
 except Exception as e:
     print(f'Failed to save backup seq json: {e}')

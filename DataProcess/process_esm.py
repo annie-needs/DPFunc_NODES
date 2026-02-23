@@ -27,6 +27,8 @@ batch_converter = alphabet.get_batch_converter()
 model.eval()
 device = torch.device("cuda")
 
+print(len(x_seqs))
+
 batch_size = 10
 steps = len(x_seqs)//batch_size#+1
 print(steps)
