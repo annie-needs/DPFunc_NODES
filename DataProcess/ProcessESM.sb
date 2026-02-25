@@ -9,8 +9,9 @@
 #SBATCH --time=10:00:00               # limit of wall clock time - how long the job will run (same as -t)
 #SBATCH --nodes=1                     # number of different nodes - could be an exact number or a range of nodes (same as -N)
 #SBATCH --ntasks=1                    # number of tasks - how many tasks (nodes) that you require (same as -n)
-#SBATCH --gpus=v100:2                 # number of GPUs 
-#SBATCH --mem-per-gpu=15G             # memory required per allocated CPU (or core) - amount of memory (in bytes)
+#SBATCH --partition=gpu                 # number of GPUs 
+#SBATCH --gres=gpu:4
+#SBATCH --mem-per-gpu=20G             # memory required per allocated CPU (or core) - amount of memory (in bytes)
 #SBATCH --output=esm_%j.out     # output file (%j will be replaced with job ID)
 #SBATCH --error=esm_%j.err      # error file (%j will be replaced with job ID)
 #SBATCH --job-name=Step4         # you can give your job a name for easier identification (same as -J)
@@ -28,3 +29,6 @@ cd /mnt/research/woldring_lab/Members/Needs/NODES/DPFunc_NODES/DataProcess/
 python Step4.py
 
 echo "ran"
+
+scontrol show job $SLURM_JOB_ID
+js -j $SLURM_JOB_ID
